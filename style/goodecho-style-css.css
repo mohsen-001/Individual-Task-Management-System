@@ -81,6 +81,7 @@ body{
 
 
 
+/* This is Input Component */
 
 .g-input {
     width: 287px;
@@ -115,6 +116,40 @@ body{
 }
 
 
+
+
+
+
+
+/* This is Checkbox component */
+
+input[type="checkbox"]{
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+    border: 2px solid #C2C2C2;
+    border-radius: 5px;
+    position: relative;
+    margin-right: 8px;
+}
+
+input[type="checkbox"]::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    border-radius: 2.5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+input[type="checkbox"]:checked::after{
+    display: block;
+}
 
 
 

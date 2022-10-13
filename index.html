@@ -13,7 +13,7 @@
         <div class="login-page">
             <div class="login-title">
                 <h1>Welcome</h1>
-                <p>Let's make job done together.</p>
+                <p>Let's make the job done together.</p>
             </div>
 
             <div class="username">
@@ -27,16 +27,13 @@
             </div>
 
             <div class="remember-me">
-                <!-- <input type="checkbox">
-                <label for="checkbox" name="checkbox">Remember me</label> -->
-                <label class="g-label">
-                    <input class="checkbox" type="checkbox" name="checkbox" />
-                    Remember me
-                </label>
+                <input id="g-checkbox" type="checkbox" name="g-checkbox" />
+                <label for="g-checkbox">Remember me</label>
             </div>
 
             <div class="submit">
-                <button class="g-btn g-btn-primary custom-btn">Login</button>
+                <button class="g-btn g-btn-primary custom-btn" data-btn-loader>Login
+                </button>
                 <div class="divider">Or</div>
                 <button class="g-btn g-btn-tertiary custom-btn">Sign Up</button>
             </div>
@@ -47,6 +44,9 @@
             <p>Made by</p>
             <img src="./img/heart.png" alt="heart">
         </div>
+
     </div>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="./app/goodecho.app.js"></script>
 </body>
 </html>
