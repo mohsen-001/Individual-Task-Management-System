@@ -1,0 +1,153 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/login-bg.jpg) no-repeat;
+    background-position: cover;
+    flex-direction: column;
+}
+
+/* Title */
+
+.signup-page{
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.signup-title{
+    margin-bottom: 43px;
+}
+
+.signup-title h1{
+    color: var(--primary-color);
+}
+
+.signup-title p{
+    color: var(--primary-black);
+}
+
+
+
+/* Fullname */
+
+.name {
+    margin-bottom: 24px;
+} 
+
+.name input {
+    width: 208px;
+}
+
+.first-name{
+    display: inline-block;
+    margin-right: 16px;
+}
+
+.last-name {
+    display: inline-block;
+}
+
+.email {
+    margin-bottom: 24px;
+} 
+
+
+
+
+/* Email */
+
+.email input {
+    width: 100%;
+}
+
+
+
+
+
+
+/* Password-field */
+
+.password-field {
+    margin-bottom: 24px;
+} 
+
+.password-field input {
+    width: 208px;
+}
+
+.password{
+    display: inline-block;
+    margin-right: 16px;
+}
+
+.re-password {
+    display: inline-block;
+}
+
+
+
+/* buttons */
+
+.submit{
+    text-align: center;
+    width: 100%;
+}
+
+.divider{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-black);
+    opacity: 0.5;
+    position: relative;
+    background-color: white;
+    width: 50px;
+    display: inline;
+    padding: 0 20px;
+}
+
+.divider::after{
+    content: '';
+    width: 283px;
+    height: 1px;
+    background-color: black;
+    /* opacity: 0.3; */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-40%);
+    z-index: -5;
+    opacity: 0.3;
+}
+
+.submit .custom-btn {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/* image  */
+
+.image img{
+    width: 512px;
+    border-radius: 20px;
+    margin-left: 63px;
+}
+
+
+.policy-agreement{
+    margin-bottom: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.policy-agreement a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+

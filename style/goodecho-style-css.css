@@ -101,8 +101,9 @@ body{
 
 .g-input::placeholder {
     font-size: 14px;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     color: #868686;
+    opacity: 0.5;
     font-weight: 500;
 }
 
