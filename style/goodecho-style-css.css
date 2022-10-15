@@ -83,9 +83,10 @@ body{
 
 /* This is Input Component */
 
-.g-input {
+.g-form-control input {
     width: 287px;
     height: 53px;
+    display: block;
     border-radius: 5px;
     border: none;
     background-color: var(--input-color);
@@ -93,13 +94,14 @@ body{
     font-size: 16px;
 }
 
-.g-input:focus {
-    outline: 2px solid var(--primary-color);
+.g-form-control input:focus {
+    outline: none;
+    border: 2px solid var(--primary-color);
     box-shadow: 0 0 10px 0 rgba(71, 181, 255, 0.3);
     background-color: white;
 }
 
-.g-input::placeholder {
+.g-form-control input::placeholder {
     font-size: 14px;
     /* letter-spacing: 1px; */
     color: #868686;
@@ -108,7 +110,7 @@ body{
 }
 
 
-.g-label {
+.g-form-control label {
     display: block;
     font-size: 16px;
     color: var(--black-color);
@@ -151,6 +153,8 @@ input[type="checkbox"]::after{
 input[type="checkbox"]:checked::after{
     display: block;
 }
+
+
 
 
 
