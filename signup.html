@@ -11,57 +11,73 @@
 <body>
 
     <div class="container">
-        <div class="signup-page">
-
-            <div class="from">
-                <div class="signup-title">
+        
+        <div class="form-holder">
+            <form id="form">
+                <div class="title">
                     <h1>Create Account</h1>
                     <p>Fill up your details below.</p>
                 </div>
-
-                <div class="name">
-                    <div class="first-name">
-                        <label class="g-label" for="email">First Name</label>
-                        <input type="text" name="name" class="g-input" placeholder="Moh. Mohsen" required>
+    
+                <div class="name-field">
+                    <div class="g-form-control mr-16">
+                        <label class="g-label" for="firstname">FirstName</label>
+                        <input type="text" name="firstname" id="firstname" placeholder="Moh. Mohsen">
+                        <small>Message goes here!</small>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <i class="fa-solid fa-circle-check"></i>
                     </div>
-                    <div class="last-name">
-                        <label class="g-label" for="email">Last Name</label>
-                        <input type="text" name="name" class="g-input" placeholder="Ahmadi">
+                    <div class="g-form-control">
+                        <label class="g-label" for="lastname">LastName</label>
+                        <input type="text" name="lastname" id="lastname" placeholder="Ahmadi">
+                        <small>Message goes here!</small>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </div>
 
-                <div class="email">                    
+                <div class="g-form-control">
                     <label class="g-label" for="email">Email</label>
-                    <input type="text" name="email" class="g-input" placeholder="yourname@example.com">
+                    <input type="text" name="email" id="email" placeholder="yourname@example.com">
+                    <small>Message goes here!</small>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <i class="fa-solid fa-circle-check"></i>
                 </div>
-
+                
                 <div class="password-field">
-                    <div class="password">
-                        <label class="g-label" for="email">Password</label>
-                        <input type="password" name="name" class="g-input" placeholder="Password">
+                    <div class="g-form-control mr-16">
+                        <label class="g-label" for="password">Password</label>
+                        <input type="text" name="password" id="password" placeholder="password">
+                        <small>Message goes here!</small>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <i class="fa-solid fa-circle-check"></i>
                     </div>
-                    <div class="re-password">
-                        <label class="g-label" for="email">Re-password</label>
-                        <input type="password" name="name" class="g-input" placeholder="Re-password">
+                    <div class="g-form-control">
+                        <label class="g-label" for="re-password">Re-password</label>
+                        <input type="text" name="re-password" id="re-password" placeholder="Confirm Password">
+                        <small>Message goes here!</small>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </div>
-
+    
                 <div class="policy-agreement">
                     <input id="g-checkbox" type="checkbox" name="g-checkbox" />
                     <label for="g-checkbox">I agree to <a href="#">Terms</a>, <a href="#">Privacy Policy</a> and <a href="#">Fees</a></label>
                 </div>
-
+    
                 <div class="submit">
                     <button class="g-btn g-btn-primary custom-btn" data-btn-loader>Sign up
                     </button>
                     <div class="divider">Or</div>
                     <button class="g-btn g-btn-tertiary custom-btn">Already have an account?</button>
                 </div>
-
-            </div>
+    
+            </form>
+        
 
             <div class="image">
-                <img src="./img/signup-img.jpg" alt="image">
+            <img src="./img/signup-img.jpg" alt="image">
             </div>
         </div>
     </div>

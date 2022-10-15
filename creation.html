@@ -9,14 +9,39 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="g-form-control">
-        <label for="name">Input Label</label>
-        <input type="text" name="name" id="name" placeholder="some text">
-    </div>
+    <form id="form" action="/">
+        <div class="g-form-control">
+            <label for="name">Full Name</label>
+            <input type="text" name="name" id="name" placeholder="some text">
+            <small>Message goes here!</small>
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="g-form-control">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="some text">
+            <small>Message goes here!</small>
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="g-form-control">
+            <label for="password">Password</label>
+            <input type="text" name="password" id="password" placeholder="some text">
+            <small>Message goes here!</small>
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <button class="g-btn g-btn-primary">login</button>
+    </form>
+
+    
 
     <!-- <div class="g-form-control">
         <label for="name">Input Label</label>
         <input type="text" name="name" id="name" placeholder="some text">
     </div> -->
+    <script src="https://kit.fontawesome.com/2da1043b58.js" crossorigin="anonymous"></script>
+    <script src="./app/validation.js"></script>
+
 </body>
 </html>

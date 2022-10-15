@@ -9,19 +9,25 @@
     flex-direction: column;
 }
 
-.username, .password {
-    margin-bottom: 24px;
+#form{
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
 }
 
-.login-title{
+.g-form-control {
+    margin-bottom: 5px;
+}
+
+#form .title{
     margin-bottom: 43px;
 }
 
-.login-title h1{
+#form .title h1{
     color: var(--primary-color);
 }
 
-.login-title p{
+#form .title p{
     color: var(--primary-black);
 }
 
@@ -72,15 +78,6 @@
 
 
 
-
-
-
-
-.login-page{
-    background-color: white;
-    padding: 50px;
-    border-radius: 20px;
-}
 
 .maker {
     margin-top: 24px;

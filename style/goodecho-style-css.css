@@ -29,6 +29,9 @@ body{
 }
 
 
+
+
+
 /* Button Components */ 
 
 .g-btn {
@@ -83,6 +86,10 @@ body{
 
 /* This is Input Component */
 
+.g-form-control {
+    position: relative;
+}
+
 .g-form-control input {
     width: 287px;
     height: 53px;
@@ -103,12 +110,10 @@ body{
 
 .g-form-control input::placeholder {
     font-size: 14px;
-    /* letter-spacing: 1px; */
     color: #868686;
     opacity: 0.5;
     font-weight: 500;
 }
-
 
 .g-form-control label {
     display: block;
@@ -118,7 +123,40 @@ body{
     font-weight: 500;
 }
 
+.g-form-control small{
+    color: red;
+    visibility: hidden;
+}
 
+.g-form-control.g-error input{
+    border: 2px solid red;
+}
+
+.g-form-control.g-success input{
+    border: 2px solid rgb(1, 171, 1);
+}
+
+.g-form-control i {
+    position: absolute;
+    right: 10px;
+    top: 48px;
+    visibility: hidden;
+}
+
+.g-form-control.g-success i.fa-circle-check {
+    color: rgb(1, 171, 1);
+    visibility: visible;
+}
+
+.g-form-control.g-error i.fa-circle-exclamation {
+    color: red;
+    visibility: visible;
+}
+
+.g-form-control.g-error small {
+    color: red;
+    visibility: visible;
+}
 
 
 
@@ -153,6 +191,7 @@ input[type="checkbox"]::after{
 input[type="checkbox"]:checked::after{
     display: block;
 }
+
 
 
 
