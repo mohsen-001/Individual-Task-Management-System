@@ -97,7 +97,10 @@ signUp.addEventListener('click', (e) => {
         setTimeout(() => {
           window.location.href = "./login.html";
         // console.log('info added')
-        }, 3000);
+        }, 2000);
+    }else{
+        signUp.removeChild(signUp.firstElementChild);
+        signUp.innerHTML = 'sign up'
     }
 })
 

@@ -55,10 +55,12 @@ loginBtn.addEventListener('click', (e) => {
     const passwordValidated = checkPassword();
     
     if(emailValidated && passwordValidated){
-        
         setTimeout(() => {
           window.location.href = "./index.html";
-        }, 3000);
+        }, 2000);
+    }else{
+        loginBtn.removeChild(loginBtn.firstElementChild);
+        loginBtn.innerHTML = 'Login';
     }
 })
 
