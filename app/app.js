@@ -6,15 +6,18 @@ const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 const checkbox = document.querySelector('.g-checkbox');
 
-const emailData = 'ah.mohsen001@gmail.com';
-const passwordData = '123';
+const userRawData = localStorage.getItem('currentUser');
+const userData = JSON.parse(userRawData);
 
 function checkEmail() {
     const emailValue = email.value.trim();
     if (emailValue === '') {
         setError(email, 'Email is required!');
         return false;
-    }else if (emailValue !== emailData) {
+    }else if(userData === null){
+        setError(email, 'Email doesnot exist!');
+        return false;
+    }else if (emailValue !== userData.email) {
         setError(email, 'Email is incorrect!');
         return false;
     }else{
@@ -27,7 +30,11 @@ function checkPassword() {
     if (passwordValue === "") {
         setError(password, 'Password is required!');
         return false;
-    }else if(passwordValue !== passwordData){
+    }else if(userData === null){
+        setError(password, 'Password is incorrect!');
+        password.value = "";
+        return false;
+    }else if(passwordValue !== userData.password){
         setError(password, 'Password is incorrect!');
         return false;
     }else{
@@ -44,12 +51,13 @@ function setError(elem, msg) {
 
 loginBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    // console.log('hey')
     const emailValidated = checkEmail();
     const passwordValidated = checkPassword();
+    
     if(emailValidated && passwordValidated){
+        
         setTimeout(() => {
-          window.location.href = "./dashboard.html";
+          window.location.href = "./index.html";
         }, 3000);
     }
 })

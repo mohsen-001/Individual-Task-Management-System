@@ -1,5 +1,5 @@
 const signUp = document.querySelector('.submit .g-btn-primary');
-const haveAccount = document.querySelector('.submit .g-btn-primary');
+const haveAccount = document.querySelector('.submit .g-btn-tertiary');
 
 const form = document.querySelector('#form');
 const firstName = document.querySelector('#firstname');
@@ -84,8 +84,18 @@ signUp.addEventListener('click', (e) => {
     const rePasswordValidated = checkRePassword();
 
     if(firstNameValidated && lastNameValidated && emailValidated && passwordValidated && rePasswordValidated){
+        const userObject = {
+            firstName: firstName.value.trim(),
+            lastName: lastName.value.trim(),
+            email: email.value.trim(),
+            password: password.value.trim()
+        }
+        const userObjectData = JSON.stringify(userObject);
+        localStorage.setItem('currentUser', userObjectData);
+        // console.log(userObjectData);
+
         setTimeout(() => {
-          window.location.href = "./index.html";
+          window.location.href = "./login.html";
         // console.log('info added')
         }, 3000);
     }
@@ -97,7 +107,7 @@ const validateEmail = (email) => {
     );
   };
 
-// signUp.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     window.location.href = "./signup.html";
-// })
+haveAccount.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.href = "./login.html";
+})
