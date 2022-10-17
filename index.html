@@ -4,15 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/goodecho-style-css.css">
     <link rel="stylesheet" href="./style/index-style.css">
     <title>Document</title>
 </head>
 <body>
+
+
+    <!-- loader -->
+
     <div class="loader">
         <lottie-player src="./loader/page-loader.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
     </div>
-    <h1>welcome to dashboard</h1>
+
+    <!-- contents start here -->
+
+    <div id="container">
+
+        <!-- sidebar -->
+
+        <div id="sidebar" class="">
+
+        </div>
+
+
+        <!-- content -->
+
+        <div id="content">
+
+            <div class="navbar">
+                <i class="fa-solid fa-bars-staggered"></i>
+                <span class="time">05:30</span>
+                <span class="date">Wed, Octobar 15</span>
+                <div class="searchbox">
+                    <input type="text" placeholder="Search tasks...">
+                    <button class="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="task-header">
+                <h3>Tasks</h3>
+            </div>
+
+        
+            <div class="task">
+                <div class="bar todo">hey</div>
+                <div class="bar in-progress">hey</div>
+                <div class="bar completed">hey</div>
+            </div>
+        </div>
+    </div>
+
+
+
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://kit.fontawesome.com/2da1043b58.js" crossorigin="anonymous"></script>
     <script src="./app/index.js"></script>
 </body>
 </html>

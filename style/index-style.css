@@ -1,6 +1,7 @@
 body{
     overflow: hidden;
 }
+
 .loader{
     width: 100%;
     height: 100vh;
@@ -8,5 +9,99 @@ body{
     align-items: center;
     justify-content: center;
     position: absolute;
+    z-index: 10;
     background-color: white;
+}
+
+
+#container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#sidebar {
+    width: 400px;
+    /* min-width: 300px; */
+    height: 100vh;
+    background-color: white;
+    transition: .1s ease-in;
+}
+
+.expand-sidebar{
+    width: 80px !important;
+}
+
+#content {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/content-bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(247, 247, 178); */
+}
+
+.navbar {
+    /* padding: 0px 60px; */
+    display: flex;
+    align-items: center;
+}
+
+.navbar .fa-bars-staggered {
+    color: white;
+    font-weight: bold;   
+    font-size: 1.7rem;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.navbar .time, .date {
+    font-size: 2.1rem;
+    font-weight: 200;
+    color: white;
+    margin: 0 5px;
+}
+
+.searchbox {
+    margin-left: auto;
+}
+
+.searchbox input {
+    width: 600px;
+    border: none;
+    border-radius: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+}
+
+.searchbox input:focus {
+    outline: 2px solid white;
+}
+
+
+/*///////////////////// task //////////////////////////////////*/
+
+.task-header{
+    display: flex;
+    margin: 40px 0 20px 0;
+}
+
+.task{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 16px 24px;
+    display: flex;
+    /* justify-items: space-around; */
+}
+
+.task .bar {
+    /* background-color: white; */
+    width: 100%;
 }
