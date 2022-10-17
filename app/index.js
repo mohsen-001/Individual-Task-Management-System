@@ -1,4 +1,4 @@
-const sidebar_btn = document.querySelector('.fa-bars-staggered');
+const sidebar_btn = document.querySelector('.bar-icon');
 const sidebar = document.querySelector('#sidebar');
 
 if (!localStorage.getItem('currentUser')) window.location.href = "./login.html";
