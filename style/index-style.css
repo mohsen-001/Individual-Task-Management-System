@@ -30,7 +30,35 @@ body{
 }
 
 .expand-sidebar{
-    width: 80px !important;
+    width: 102px !important;
+
+}
+
+.expand-sidebar .profile p, .expand-sidebar .menu-list .list span{
+    display: none;
+}
+
+.expand-sidebar .profile {
+    padding: 10px !important;
+}
+
+.expand-sidebar .menu-list .list i{
+    margin-right: 0 !important;
+}
+
+.expand-sidebar .menu-list .list {
+    padding: 20px !important;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.expand-sidebar .profile, .expand-sidebar .menu-list .list {
+    /* display: block !important; */
+    justify-content: center;
+}
+
+.expand-sidebar .profile .pic{
+    margin-right: 0 !important;
 }
 
 
@@ -52,11 +80,40 @@ body{
     margin-right: 20px;
 }
 
-#sidebar .profile .pic img{
+#sidebar .profile .pic img {
     width: 100%;
     height: 100%;
 }
 
+#sidebar .menu-list {
+    margin-top: 40px;
+}
+
+#sidebar .menu-list .list {
+    list-style: none;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    /* transition: 0.1s linear; */
+}
+
+#sidebar .menu-list .list i{
+    opacity: 0.3;
+    font-size: 1.3rem;
+    margin-right: 15px;
+}
+
+#sidebar .menu-list .list:hover {
+    background-color: rgba(71, 181, 255, 0.1);
+    color: var(--primary-color);
+}
+
+#sidebar .menu-list .list:hover i {
+    opacity: 1  ;
+}
 
 
 
