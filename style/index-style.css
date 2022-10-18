@@ -220,7 +220,8 @@ body {
 
 .task-container {
     width: 100%;
-    height: 100%;
+    height: 75vh;
+    /* max-height: 540px; */
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     backdrop-filter: blur(10px);
@@ -242,7 +243,7 @@ body {
     background-color: #5F5F5F;
     display: flex;
     width: 100%;
-    padding: 18px 24px;
+    padding: 10px 24px;
     border-radius: 10px;
     color: white;
 }
@@ -258,9 +259,10 @@ body {
 .task-container .task {
     background-color: rgba(95, 95, 95, 0.15);
     height: 100%;
-    margin-top: 23px;
+    margin-top: 10px;
     border-radius: 10px;
     padding: 10px 20px;
+    overflow: auto;
 }
 
 .task-container .task .add-task {
@@ -275,4 +277,20 @@ body {
 
 .task-container .task .add-task:hover {
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+.task-container .task .in-task li{
+    list-style: none;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+.task-container .task .in-task li p{
+    font-size: 0.8rem;
+    background-color: rgba(95, 95, 95, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
 }
