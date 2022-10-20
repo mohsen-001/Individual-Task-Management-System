@@ -20,7 +20,9 @@ window.addEventListener('load', ()=> {
     const userFullName = `${userData.firstName} ${userData.lastName}`;
     profileName.innerHTML = userFullName;
 }, 3000);
-});
+
+
+
 
 
 sidebar_btn.addEventListener('click', () => {
@@ -57,3 +59,7 @@ approveBtn.addEventListener('click', () => {
     const loginAdded = JSON.stringify(userData);
     localStorage.setItem('currentUser', loginAdded);
 })
+
+});
+
+
