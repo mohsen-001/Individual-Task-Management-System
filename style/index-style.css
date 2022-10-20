@@ -227,22 +227,22 @@ body {
 .task-title {
     display: flex;
     margin: 40px 0 20px 0;
+    color: white;
 }
 
 .task-container {
     width: 100%;
-    height: 75vh;
-    /* max-height: 540px; */
+    height: 78vh;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 16px 24px;
+    padding: 14px 10px;
     display: flex;
     justify-content: space-between;
 }
 
-.task-container .bar {
+.task-container .task-bar {
     width: 100%;
     margin: 0 10px;
     padding: 20px;
@@ -250,33 +250,36 @@ body {
     flex-direction: column;
 }
 
-.task-container .bar .tab-header {
+.task-container .task-bar .task-bar-header {
     background-color: #5F5F5F;
     display: flex;
     width: 100%;
-    padding: 10px 24px;
+    padding: 16px 24px;
     border-radius: 10px;
     color: white;
 }
 
-.task-container .bar .tab-header span {
+.task-container .task-bar .task-bar-header span {
     font-weight: 500;
 }
 
-.task-container .bar .tab-header .counter {
+.task-container .task-bar .task-bar-header div {
     margin-left: auto;
+    background-color: gray;
+    border-radius: 20px;
+    padding: 1px 8px;
 }
 
-.task-container .task {
+.task-container .task-bar .task-bar-body {
     background-color: rgba(95, 95, 95, 0.15);
     height: 100%;
     margin-top: 10px;
     border-radius: 10px;
-    padding: 10px 20px;
-    overflow: auto;
+    padding: 16px;
+    overflow: hidden;
 }
 
-.task-container .task .add-task {
+.task-container .task-bar .task-bar-body .task-bar-add {
     width: 100%;
     color: white;
     font-size: 1.5rem;
@@ -286,19 +289,53 @@ body {
     cursor: pointer;
 }
 
-.task-container .task .add-task:hover {
+.task-container .task-bar .task-bar-body .task-bar-add:hover {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-.task-container .task .in-task li{
-    list-style: none;
-    background-color: white;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 8px 0;
+.task-container .task-bar .task-bar-body .task-bar-holder{
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    margin-top: 16px;
+    padding: 0 10px 20px 10px;
 }
 
-.task-container .task .in-task li p{
+.task-container .task-bar .task-bar-body .task-bar-item{
+    background-color: white;
+    border-radius: 5px;
+    padding: 12px;
+    margin: 16px 0;
+}
+
+.task-bar-item .task-bar-item-subject {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.task-bar-item .task-bar-item-subject .fa-grip {
+    font-size: 1.5rem;
+}
+
+.task-bar-item .task-bar-item-subject .fa-up-right-from-square{
+    color: var(--primary-color);
+    display: none;
+}
+
+.task-bar-item .task-bar-item-subject .subject {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 8px 0 14px;
+    cursor: pointer;
+}
+
+.task-bar-item .task-bar-item-subject .subject:hover .task-bar-item .task-bar-item-subject .fa-up-right-from-square{
+    display: block !important;
+}
+
+.task-bar-item .task-bar-item-body{
     font-size: 0.8rem;
     background-color: rgba(95, 95, 95, 0.1);
     padding: 10px;
@@ -306,6 +343,36 @@ body {
     margin-top: 10px;
 }
 
+.task-bar-item .task-bar-item-date {
+    display: flex;
+    padding: 10px 0 0 0;
+}
+
+.task-bar-item .task-bar-item-date span{
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+.task-bar-item .task-bar-item-date .update-date {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.task-bar-item .task-bar-item-date .update-time {
+    position: relative;
+}
+
+.task-bar-item .task-bar-item-date .update-time::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    border-radius: 25px;
+    top: 50%;
+    left: -13px;
+    transform: translateY(-50%);
+}
 
 
 
@@ -331,12 +398,6 @@ body {
     margin-bottom: 200px;
     opacity: 0;
 }
-
-/* @keyframes marginBtm {
-    70% {
-       margin-bottom: 400px;
-    }
- } */
 
 .sweet-alert-container .sweet-alert .sweet-body {
     padding: 54px 0;
@@ -370,4 +431,27 @@ body {
 
 .sweet-alert-container .sweet-alert .sweet-cta .g-btn-tertiary:hover {
     background-color: rgba(71, 181, 255, 0.2);
+}
+
+
+
+
+
+
+
+/* scroll bar style */
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
 }
