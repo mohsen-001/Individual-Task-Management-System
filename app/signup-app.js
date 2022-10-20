@@ -82,13 +82,15 @@ signUp.addEventListener('click', (e) => {
     const emailValidated = checkEmail();
     const passwordValidated = checkPassword();
     const rePasswordValidated = checkRePassword();
+    const isLogin = false;
 
     if(firstNameValidated && lastNameValidated && emailValidated && passwordValidated && rePasswordValidated){
         const userObject = {
             firstName: firstName.value.trim(),
             lastName: lastName.value.trim(),
             email: email.value.trim(),
-            password: password.value.trim()
+            password: password.value.trim(),
+            isLogin: isLogin
         }
         const userObjectData = JSON.stringify(userObject);
         localStorage.setItem('currentUser', userObjectData);

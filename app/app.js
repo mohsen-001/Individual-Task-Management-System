@@ -57,6 +57,10 @@ loginBtn.addEventListener('click', (e) => {
     if(emailValidated && passwordValidated){
         setTimeout(() => {
           window.location.href = "./index.html";
+          userData.isLogin = true;
+          const loginAdded = JSON.stringify(userData);
+          localStorage.setItem('currentUser', loginAdded);
+          
         }, 2000);
     }else{
         loginBtn.removeChild(loginBtn.firstElementChild);

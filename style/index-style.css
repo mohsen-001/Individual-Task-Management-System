@@ -56,6 +56,17 @@ body {
     /* display: inline-block; */
 }
 
+#sidebar .menu-list .logout {
+    margin-top: auto;
+}
+
+#sidebar .menu-list {
+    height: 82vh;
+    /* background-color: gainsboro; */
+    display: flex;
+    flex-direction: column;
+}
+
 .expand-sidebar .profile .pic {
     margin-right: 0 !important;
 }
@@ -293,4 +304,70 @@ body {
     padding: 10px;
     border-radius: 5px;
     margin-top: 10px;
+}
+
+
+
+
+
+/* sweet alert style here  */
+
+.sweet-alert-container{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.sweet-alert-container .sweet-alert{
+    background-color: white;
+    border-radius: 10px;
+    width: 444px;
+    margin-bottom: 200px;
+    opacity: 0;
+}
+
+/* @keyframes marginBtm {
+    70% {
+       margin-bottom: 400px;
+    }
+ } */
+
+.sweet-alert-container .sweet-alert .sweet-body {
+    padding: 54px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sweet-alert-container .sweet-alert .sweet-body i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 49px;
+}
+
+.sweet-alert-container .sweet-alert .sweet-body p {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.sweet-alert-container .sweet-alert .sweet-cta {
+    display: flex;
+    padding: 19px 24px;
+    background-color: rgba(71, 181, 255, 0.1);
+}
+
+.sweet-alert-container .sweet-alert .sweet-cta .g-btn-tertiary {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.sweet-alert-container .sweet-alert .sweet-cta .g-btn-tertiary:hover {
+    background-color: rgba(71, 181, 255, 0.2);
 }
