@@ -196,7 +196,7 @@ body {
 }
 
 .searchbox input {
-    width: 600px;
+    width: 400px;
     border: none;
     border-radius: 50px;
     height: 50px;
@@ -232,7 +232,7 @@ body {
 
 .task-container {
     width: 100%;
-    height: 78vh;
+    height: auto;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     backdrop-filter: blur(10px);
@@ -240,12 +240,13 @@ body {
     padding: 14px 10px;
     display: flex;
     justify-content: space-between;
+    margin-top: 25px;
 }
 
 .task-container .task-bar {
     width: 100%;
-    margin: 0 10px;
-    padding: 20px;
+    margin: 0 5px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
 }
@@ -254,9 +255,9 @@ body {
     background-color: #5F5F5F;
     display: flex;
     width: 100%;
-    padding: 16px 24px;
     border-radius: 10px;
     color: white;
+    padding: 8px 24px;
 }
 
 .task-container .task-bar .task-bar-header span {
@@ -265,9 +266,10 @@ body {
 
 .task-container .task-bar .task-bar-header div {
     margin-left: auto;
-    background-color: gray;
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
-    padding: 1px 8px;
+    padding: 2px 8px;
+    font-size: 0.8rem;
 }
 
 .task-container .task-bar .task-bar-body {
@@ -275,7 +277,7 @@ body {
     height: 100%;
     margin-top: 10px;
     border-radius: 10px;
-    padding: 16px;
+    padding: 10px;
     overflow: hidden;
 }
 
@@ -295,17 +297,21 @@ body {
 
 .task-container .task-bar .task-bar-body .task-bar-holder{
     width: 100%;
-    height: 100%;
-    overflow: scroll;
-    margin-top: 16px;
-    padding: 0 10px 20px 10px;
+    height: 63vh;
+    overflow: auto;
+    margin-top: 10px;
+    padding: 5px 5px;
 }
 
 .task-container .task-bar .task-bar-body .task-bar-item{
     background-color: white;
     border-radius: 5px;
     padding: 12px;
-    margin: 16px 0;
+    margin: 10px 0;
+}
+
+.task-container .task-bar .task-bar-body .task-bar-item:last-child, .task-container .task-bar .task-bar-body .task-bar-item:first-child {
+    margin: 0 0 !important;
 }
 
 .task-bar-item .task-bar-item-subject {
@@ -316,7 +322,8 @@ body {
 }
 
 .task-bar-item .task-bar-item-subject .fa-grip {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    opacity: 0.5;
 }
 
 .task-bar-item .task-bar-item-subject .fa-up-right-from-square{
@@ -375,6 +382,37 @@ body {
 }
 
 
+/* inporgress theme */
+
+.inprogress-theme .task-bar-header {
+    background-color: var(--primary-color) !important;
+}
+
+.inprogress-theme .task-bar-item-subject .fa-grip{
+    color: var(--primary-color);
+}
+
+.inprogress-theme .task-bar-item-body{
+    background-color: rgba(71, 181, 255, 0.1);
+}
+
+
+
+
+/* compeleted theme */
+
+.done-theme .task-bar-header {
+    background-color: #2EB100 !important;
+}
+
+.done-theme .task-bar-item-subject .fa-grip{
+    color: #2EB100  ;
+}
+
+.done-theme .task-bar-item-body{
+    background-color: rgba(46, 177, 0, 0.1);
+}
+
 
 
 /* sweet alert style here  */
@@ -394,13 +432,14 @@ body {
 .sweet-alert-container .sweet-alert{
     background-color: white;
     border-radius: 10px;
-    width: 444px;
-    margin-bottom: 200px;
+    /* width: 444px; */
+    width: 30vw;
+    /* margin-bottom: 200px; */
     opacity: 0;
 }
 
 .sweet-alert-container .sweet-alert .sweet-body {
-    padding: 54px 0;
+    padding: 30px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -410,7 +449,7 @@ body {
 .sweet-alert-container .sweet-alert .sweet-body i {
     font-size: 3rem;
     color: var(--primary-color);
-    margin-bottom: 49px;
+    margin-bottom: 30px;
 }
 
 .sweet-alert-container .sweet-alert .sweet-body p {

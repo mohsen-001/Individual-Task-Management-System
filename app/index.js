@@ -6,6 +6,11 @@ const sweetAlertContainer = document.querySelector('.sweet-alert-container');
 const sweetAlert = document.querySelector('.sweet-alert-container .sweet-alert');
 const cancelBtn = document.querySelector('.sweet-alert-container .g-btn-tertiary');
 const approveBtn = document.querySelector('.sweet-alert-container .g-btn-primary');
+const navTime = document.querySelector('.navbar .time');
+const navDate = document.querySelector('.navbar .date');
+// const dateObject = new Date();
+// navTime.innerHTML = `${new Date().dateObject.getHours()}:${new Date().dateObject.getMinutes()}`;
+// console.log(dateObject.getMinutes());
 
 const userRawData = localStorage.getItem('currentUser');
 const userData = JSON.parse(userRawData);
@@ -36,7 +41,7 @@ logout.addEventListener('click', () => {
         {
             sweetAlert.style.webkitTransitionDuration = "0.1s";
             sweetAlert.style.webkitTransitionTimingFunction = "ease";
-            sweetAlert.style.webkitTransform = "translate3d(0, -100px, 0)";
+            sweetAlert.style.webkitTransform = "translate3d(0, -50px, 0)";
             sweetAlert.style.opacity= "1";
         }, 0);
     
